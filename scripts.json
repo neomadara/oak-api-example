@@ -2,8 +2,16 @@
   "$schema": "https://deno.land/x/denon/schema.json",
   "scripts": {
     "start": {
-      "cmd": "deno run --allow-net server.ts",
-      "desc": "run my app.ts file"
+      "cmd": "deno run app.ts",
+      "desc": "run my app.ts file",
+      "allow": ["plugin", "net", "read", "write", "env"],
+      "unestable": true
     }
+  },
+  "watcher": {
+    "interval": 500,
+    "exts": ["ts", "json"],
+    "match": ["**/*.*"],
+    "skip": ["*/.git/*"]
   }
 }
