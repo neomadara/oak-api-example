@@ -1,7 +1,7 @@
 import Repository from "../registry/repository.interface-adapter.ts";
 import "https://deno.land/x/dotenv/load.ts";
 import DB from "../infrastructure/datastore/mongoDB.ts";
-import TodoSchema from "../domain/todo.model.ts";
+import TodoSchema from "../domain/model.ts";
 
 export class TodoRepository extends Repository implements todoRepositoryInterface{
     async getAll() {
